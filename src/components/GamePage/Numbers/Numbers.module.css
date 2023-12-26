@@ -23,6 +23,8 @@
 .numbers_row {
   display: flex;
   flex-direction: column;
+  margin-top: 30px;
+  position: relative;
 }
 
 .numbers_div{
@@ -41,7 +43,14 @@
   cursor: pointer;
   
 }
-.numbers_btn:active{
+.activenumbers_btn{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
   background-color: black;
   color: white;
 }
@@ -50,6 +59,9 @@
   font-weight: 400;
  display: flex;
  justify-content: end;
+ position: absolute;
+ top: -25px;
+ left: 103px;
 }
 .numbers_row p {
   display: flex;

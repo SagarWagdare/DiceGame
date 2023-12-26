@@ -1,31 +1,41 @@
-import { useState } from "react";
 import styles from "./Numbers.module.css";
-const Numbers = () => {
-  const [selectedNumber, setSelectedNumber] = useState(0);
-  console.log(selectedNumber);
+const Numbers = ({
+  selectedNumber,
+  setSelectedNumber,
+  score,
+  error,
+  setError,
+}) => {
   const numbers = [1, 2, 3, 4, 5, 6];
+
+  const numberSelectorHandler = (num) => {
+    setSelectedNumber(num);
+    setError("");
+  };
   return (
     <section className={styles.numbers_container}>
       <div className={styles.score}>
-        <h1>{selectedNumber}</h1>
+        <h1>{score}</h1>
         <p>Total Score</p>
       </div>
       <div className={styles.numbers_row}>
-        <span className={styles.warning_span}>
-          You have not selected any number
-        </span>
+        <span className={styles.warning_span}>{error}</span>
         <div className={styles.numbers_div}>
           {numbers.map((num, index) => (
             <span
               key={index}
-              className={styles.numbers_btn}
-              onClick={() => setSelectedNumber(num)}
+              className={
+                num === selectedNumber
+                  ? styles.activenumbers_btn
+                  : styles.numbers_btn
+              }
+              onClick={() => numberSelectorHandler(num)}
             >
               {num}
             </span>
           ))}
         </div>
-        <p>Select Number</p>
+        <p style={{margin:"5px"}}>Selected Number : {selectedNumber}</p>
       </div>
     </section>
   );

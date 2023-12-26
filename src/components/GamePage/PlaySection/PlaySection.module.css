@@ -4,6 +4,9 @@
   justify-content: center;
   align-items: center;
 }
+.playsection_div img:hover{
+  box-shadow: 10px 10px 5px lightgray inset;  border-radius: 20px;
+}
 .playsection_div p{
   font-size: 20px;
   font-weight: 500;
