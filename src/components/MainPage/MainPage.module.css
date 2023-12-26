@@ -1,0 +1,21 @@
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.image{
+  margin-top: 60px;
+}
+.text{
+  display: flex;
+  flex-direction: column;
+}
+.text h1{
+  font-size: 80px;
+}
+
+.playnow_btn{
+  display: flex;
+}

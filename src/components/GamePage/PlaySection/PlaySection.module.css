@@ -1,0 +1,22 @@
+.playsection_div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.playsection_div p{
+  font-size: 20px;
+  font-weight: 500;
+}
+.button_div{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.instructions_div{
+  background-color:#FBF1F1;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 5px;
+}
